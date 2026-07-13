@@ -1,0 +1,3 @@
+export { default } from "./TableCell";
+export { TableCell } from "./TableCell";
+export type { TableCellProps } from "./TableCell.types";

@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e9e9e9;
+  font-family: sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Header */
+.siteHeader {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.siteHeader h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+/* Hero */
+.heroSection {
+  width: 100%;
+  min-height: calc(100vh - 110px);
+  display: flex;
+}
+
+/* Component Grid */
+.componentGrid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.componentBox {
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 22px;
+  padding: 25px;
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.componentBox h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.componentRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .componentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .siteHeader h1 {
+    font-size: 32px;
+  }
+
+  .heroSection {
+    min-height: 70vh;
+  }
+}
