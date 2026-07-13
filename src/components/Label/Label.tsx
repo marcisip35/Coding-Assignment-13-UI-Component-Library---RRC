@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { LabelProps } from "./Label.types";
 
-const MyLabel = styled.label<{ $backgroundColor?: string; $disabled?: boolean }>`
+const MyLabel = styled.label<{
+  $backgroundColor?: string;
+  $disabled?: boolean;
+}>`
   background-color: ${(props) =>
-        props.$disabled ? "#1f1f1f" : props.$backgroundColor || "black"};
+    props.$disabled ? "#1f1f1f" : props.$backgroundColor || "black"};
 
   color: white;
   padding: 8px 12px;
@@ -21,20 +24,20 @@ const MyLabel = styled.label<{ $backgroundColor?: string; $disabled?: boolean }>
 `;
 
 function Label({
-    text = "Label",
-    backgroundColor = "black",
-    disabled = false,
-    htmlFor,
+  text = "Label",
+  backgroundColor = "black",
+  disabled = false,
+  htmlFor,
 }: LabelProps) {
-    return (
-        <MyLabel
-            htmlFor={htmlFor}
-            $backgroundColor={backgroundColor}
-            $disabled={disabled}
-        >
-            {text}
-        </MyLabel>
-    );
+  return (
+    <MyLabel
+      htmlFor={htmlFor}
+      $backgroundColor={backgroundColor}
+      $disabled={disabled}
+    >
+      {text}
+    </MyLabel>
+  );
 }
 
 export default Label;

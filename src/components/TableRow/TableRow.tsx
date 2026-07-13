@@ -3,7 +3,7 @@ import { TableRowProps } from "./TableRow.types";
 
 const Row = styled.tr<{ $backgroundColor?: string; $disabled?: boolean }>`
   background-color: ${(props) =>
-        props.$disabled ? "#444" : props.$backgroundColor || "white"};
+    props.$disabled ? "#444" : props.$backgroundColor || "white"};
 
   color: black;
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
@@ -16,21 +16,21 @@ const Cell = styled.td`
 `;
 
 function TableRow({
-    cells = ["Marc", "Student", "Active"],
-    backgroundColor = "white",
-    disabled = false,
+  cells = ["Marc", "Student", "Active"],
+  backgroundColor = "white",
+  disabled = false,
 }: TableRowProps) {
-    return (
-        <Row
-            data-testid="table-row"
-            $backgroundColor={backgroundColor}
-            $disabled={disabled}
-        >
-            {cells.map((cell) => (
-                <Cell key={cell}>{cell}</Cell>
-            ))}
-        </Row>
-    );
+  return (
+    <Row
+      data-testid="table-row"
+      $backgroundColor={backgroundColor}
+      $disabled={disabled}
+    >
+      {cells.map((cell) => (
+        <Cell key={cell}>{cell}</Cell>
+      ))}
+    </Row>
+  );
 }
 
 export default TableRow;

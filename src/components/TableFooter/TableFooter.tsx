@@ -3,7 +3,7 @@ import { TableFooterProps } from "./TableFooter.types";
 
 const Footer = styled.tfoot<{ $backgroundColor?: string; $disabled?: boolean }>`
   background-color: ${(props) =>
-        props.$disabled ? "#444" : props.$backgroundColor || "black"};
+    props.$disabled ? "#444" : props.$backgroundColor || "black"};
 
   color: white;
   cursor: ${(props) => (props.$disabled ? "not-allowed" : "default")};
@@ -17,21 +17,21 @@ const FooterCell = styled.td`
 `;
 
 function TableFooter({
-    text = "Table Footer",
-    backgroundColor = "black",
-    disabled = false,
+  text = "Table Footer",
+  backgroundColor = "black",
+  disabled = false,
 }: TableFooterProps) {
-    return (
-        <Footer
-            data-testid="table-footer"
-            $backgroundColor={backgroundColor}
-            $disabled={disabled}
-        >
-            <tr>
-                <FooterCell colSpan={3}>{text}</FooterCell>
-            </tr>
-        </Footer>
-    );
+  return (
+    <Footer
+      data-testid="table-footer"
+      $backgroundColor={backgroundColor}
+      $disabled={disabled}
+    >
+      <tr>
+        <FooterCell colSpan={3}>{text}</FooterCell>
+      </tr>
+    </Footer>
+  );
 }
 
 export default TableFooter;

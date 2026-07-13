@@ -1,5 +1,5 @@
 export interface TextProps {
-    text?: string;
-    backgroundColor?: string;
-    disabled?: boolean;
+  text?: string;
+  backgroundColor?: string;
+  disabled?: boolean;
 }

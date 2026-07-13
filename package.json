@@ -20,6 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false --testMatch \"<rootDir>/src/components/**/*.tests.tsx\"",
     "eject": "react-scripts eject",
@@ -52,6 +54,7 @@
     "@storybook/react-webpack5": "^10.4.6",
     "eslint-plugin-storybook": "^10.4.6",
     "jest-styled-components": "^7.4.0",
+    "prettier": "3.9.5",
     "prop-types": "^15.8.1",
     "storybook": "^10.4.6",
     "webpack": "^5.107.2"

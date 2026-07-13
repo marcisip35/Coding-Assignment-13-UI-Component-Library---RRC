@@ -1,5 +1,5 @@
 export interface TableRowProps {
-    cells?: string[];
-    backgroundColor?: string;
-    disabled?: boolean;
+  cells?: string[];
+  backgroundColor?: string;
+  disabled?: boolean;
 }

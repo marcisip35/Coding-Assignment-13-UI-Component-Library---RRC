@@ -3,7 +3,7 @@ import { ButtonProps } from "./Button.types";
 
 const MyButton = styled.button<{ $backgroundColor?: string }>`
   background-color: ${(props) =>
-        props.disabled ? "#1f1f1f" : props.$backgroundColor || "black"};
+    props.disabled ? "#1f1f1f" : props.$backgroundColor || "black"};
 
   color: white;
   padding: 15px;
@@ -26,20 +26,20 @@ const MyButton = styled.button<{ $backgroundColor?: string }>`
 `;
 
 function Button({
-    label = "Button",
-    backgroundColor = "black",
-    disabled = false,
-    onClick,
+  label = "Button",
+  backgroundColor = "black",
+  disabled = false,
+  onClick,
 }: ButtonProps) {
-    return (
-        <MyButton
-            disabled={disabled}
-            $backgroundColor={backgroundColor}
-            onClick={disabled ? undefined : onClick}
-        >
-            {label}
-        </MyButton>
-    );
+  return (
+    <MyButton
+      disabled={disabled}
+      $backgroundColor={backgroundColor}
+      onClick={disabled ? undefined : onClick}
+    >
+      {label}
+    </MyButton>
+  );
 }
 
 export default Button;

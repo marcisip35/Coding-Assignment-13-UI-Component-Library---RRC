@@ -22,7 +22,10 @@ function App() {
       </div>
 
       <div className="heroSection">
-        <HeroImage title="UI Garden" subtitle="React • Storybook • Components" />
+        <HeroImage
+          title="UI Garden"
+          subtitle="React • Storybook • Components"
+        />
       </div>
 
       <div className="componentGrid">
@@ -77,7 +80,11 @@ function App() {
         <div className="componentBox">
           <h2>Card</h2>
           <div className="componentRow">
-            <Card title="Cat Card" text="UI Garden Card" buttonText="Open Card" />
+            <Card
+              title="Cat Card"
+              text="UI Garden Card"
+              buttonText="Open Card"
+            />
           </div>
         </div>
 

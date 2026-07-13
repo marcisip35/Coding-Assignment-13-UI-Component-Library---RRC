@@ -20,11 +20,11 @@ const DropdownLabel = styled.label<{ $disabled?: boolean }>`
 `;
 
 const DropdownSelect = styled.select<{
-    $backgroundColor?: string;
-    $disabled?: boolean;
+  $backgroundColor?: string;
+  $disabled?: boolean;
 }>`
   background-color: ${(props) =>
-        props.$disabled ? "#444" : props.$backgroundColor || "black"};
+    props.$disabled ? "#444" : props.$backgroundColor || "black"};
 
   color: white;
   padding: 12px;
@@ -36,27 +36,27 @@ const DropdownSelect = styled.select<{
 `;
 
 function Dropdown({
-    label = "Choose an option",
-    options = ["Rock", "Paper", "Scissors"],
-    backgroundColor = "black",
-    disabled = false,
+  label = "Choose an option",
+  options = ["Rock", "Paper", "Scissors"],
+  backgroundColor = "black",
+  disabled = false,
 }: DropdownProps) {
-    return (
-        <DropdownBox $disabled={disabled}>
-            <DropdownLabel $disabled={disabled}>{label}</DropdownLabel>
+  return (
+    <DropdownBox $disabled={disabled}>
+      <DropdownLabel $disabled={disabled}>{label}</DropdownLabel>
 
-            <DropdownSelect
-                data-testid="dropdown"
-                $backgroundColor={backgroundColor}
-                $disabled={disabled}
-                disabled={disabled}
-            >
-                {options.map((option) => (
-                    <option key={option}>{option}</option>
-                ))}
-            </DropdownSelect>
-        </DropdownBox>
-    );
+      <DropdownSelect
+        data-testid="dropdown"
+        $backgroundColor={backgroundColor}
+        $disabled={disabled}
+        disabled={disabled}
+      >
+        {options.map((option) => (
+          <option key={option}>{option}</option>
+        ))}
+      </DropdownSelect>
+    </DropdownBox>
+  );
 }
 
 export default Dropdown;

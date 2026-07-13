@@ -3,7 +3,7 @@ import { CardProps } from "./Card.types";
 
 const CardBox = styled.div<{ $backgroundColor?: string; $disabled?: boolean }>`
   background-color: ${(props) =>
-        props.$disabled ? "#444" : props.$backgroundColor || "black"};
+    props.$disabled ? "#444" : props.$backgroundColor || "black"};
 
   color: white;
   width: 320px;
@@ -39,25 +39,25 @@ const CardButton = styled.button<{ $disabled?: boolean }>`
 `;
 
 function Card({
-    title = "Card Title",
-    text = "This is a simple card component.",
-    buttonText = "Read More",
-    backgroundColor = "black",
-    disabled = false,
+  title = "Card Title",
+  text = "This is a simple card component.",
+  buttonText = "Read More",
+  backgroundColor = "black",
+  disabled = false,
 }: CardProps) {
-    return (
-        <CardBox
-            data-testid="card-box"
-            $backgroundColor={backgroundColor}
-            $disabled={disabled}
-        >
-            <CardTitle>{title}</CardTitle>
-            <CardText>{text}</CardText>
-            <CardButton $disabled={disabled} disabled={disabled}>
-                {buttonText}
-            </CardButton>
-        </CardBox>
-    );
+  return (
+    <CardBox
+      data-testid="card-box"
+      $backgroundColor={backgroundColor}
+      $disabled={disabled}
+    >
+      <CardTitle>{title}</CardTitle>
+      <CardText>{text}</CardText>
+      <CardButton $disabled={disabled} disabled={disabled}>
+        {buttonText}
+      </CardButton>
+    </CardBox>
+  );
 }
 
 export default Card;

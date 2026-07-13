@@ -1,18 +1,13 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
-  ],
-  "addons": [
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: [
     "@storybook/preset-create-react-app",
     "@storybook/addon-a11y",
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
   ],
-  "framework": "@storybook/react-webpack5",
-  "staticDirs": [
-    "..\\public"
-  ]
+  framework: "@storybook/react-webpack5",
+  staticDirs: ["..\\public"],
 };
 export default config;

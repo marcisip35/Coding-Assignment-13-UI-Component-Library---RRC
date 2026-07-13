@@ -1,5 +1,5 @@
 export interface TableFooterProps {
-    text?: string;
-    backgroundColor?: string;
-    disabled?: boolean;
+  text?: string;
+  backgroundColor?: string;
+  disabled?: boolean;
 }

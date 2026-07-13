@@ -3,7 +3,7 @@ import { RadioButtonProps } from "./RadioButton.types";
 
 const RadioBox = styled.div<{ $backgroundColor?: string; $disabled?: boolean }>`
   background-color: ${(props) =>
-        props.$disabled ? "#444" : props.$backgroundColor || "black"};
+    props.$disabled ? "#444" : props.$backgroundColor || "black"};
 
   color: white;
   width: 300px;
@@ -39,34 +39,34 @@ const RadioInput = styled.input`
 `;
 
 function RadioButton({
-    label = "Choose one",
-    options = ["Rock", "Paper", "Scissors"],
-    name = "radio-options",
-    backgroundColor = "black",
-    disabled = false,
+  label = "Choose one",
+  options = ["Rock", "Paper", "Scissors"],
+  name = "radio-options",
+  backgroundColor = "black",
+  disabled = false,
 }: RadioButtonProps) {
-    return (
-        <RadioBox
-            data-testid="radio-box"
-            $backgroundColor={backgroundColor}
-            $disabled={disabled}
-        >
-            <RadioTitle>{label}</RadioTitle>
+  return (
+    <RadioBox
+      data-testid="radio-box"
+      $backgroundColor={backgroundColor}
+      $disabled={disabled}
+    >
+      <RadioTitle>{label}</RadioTitle>
 
-            {options.map((option, index) => (
-                <RadioOption key={option} $disabled={disabled}>
-                    <RadioInput
-                        type="radio"
-                        name={name}
-                        value={option}
-                        disabled={disabled}
-                        defaultChecked={index === 0}
-                    />
-                    {option}
-                </RadioOption>
-            ))}
-        </RadioBox>
-    );
+      {options.map((option, index) => (
+        <RadioOption key={option} $disabled={disabled}>
+          <RadioInput
+            type="radio"
+            name={name}
+            value={option}
+            disabled={disabled}
+            defaultChecked={index === 0}
+          />
+          {option}
+        </RadioOption>
+      ))}
+    </RadioBox>
+  );
 }
 
 export default RadioButton;

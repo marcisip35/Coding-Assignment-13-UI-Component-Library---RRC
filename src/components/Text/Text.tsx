@@ -3,7 +3,7 @@ import { TextProps } from "./Text.types";
 
 const MyText = styled.p<{ $backgroundColor?: string; $disabled?: boolean }>`
   background-color: ${(props) =>
-        props.$disabled ? "#1f1f1f" : props.$backgroundColor || "transparent"};
+    props.$disabled ? "#1f1f1f" : props.$backgroundColor || "transparent"};
 
   color: ${(props) => (props.$disabled ? "white" : "black")};
   padding: 10px;
@@ -20,15 +20,15 @@ const MyText = styled.p<{ $backgroundColor?: string; $disabled?: boolean }>`
 `;
 
 function Text({
-    text = "This is text",
-    backgroundColor = "transparent",
-    disabled = false,
+  text = "This is text",
+  backgroundColor = "transparent",
+  disabled = false,
 }: TextProps) {
-    return (
-        <MyText $backgroundColor={backgroundColor} $disabled={disabled}>
-            {text}
-        </MyText>
-    );
+  return (
+    <MyText $backgroundColor={backgroundColor} $disabled={disabled}>
+      {text}
+    </MyText>
+  );
 }
 
 export default Text;
