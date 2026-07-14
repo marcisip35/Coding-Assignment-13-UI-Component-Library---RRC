@@ -5,7 +5,7 @@ const MyButton = styled.button<{ $backgroundColor?: string }>`
   background-color: ${(props) =>
     props.disabled ? "#1f1f1f" : props.$backgroundColor || "black"};
 
-  color:         white;
+  color: white;
   padding: 15px;
   border: 3px solid black;
   border-radius: 12px;
