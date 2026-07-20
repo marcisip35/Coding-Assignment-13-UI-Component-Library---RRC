@@ -31,7 +31,7 @@ function Button({
   disabled = false,
   onClick,
 }: ButtonProps) {
-  re  turn (
+  return (
     <MyButton
       disabled={disabled}
       $backgroundColor={backgroundColor}
