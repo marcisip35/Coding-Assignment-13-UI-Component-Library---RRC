@@ -1,4 +1,4 @@
-name: Build Checks
+name: Testing Build
 
 on:
   push:
